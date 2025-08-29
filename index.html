@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <form id="resume-form" autocomplete="off">
+      <h2>Enter Your Details</h2>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Phone Number">
+      <textarea id="summary" placeholder="Profile Summary"></textarea>
+
+      <h3>Education</h3>
+      <div id="education"></div>
+      <button type="button" onclick="addEducation()">+ Add Education</button>
+
+      <h3>Skills</h3>
+      <input type="text" id="skills" placeholder="Comma separated skills">
+
+      <h3>Experience</h3>
+      <div id="experience"></div>
+      <button type="button" onclick="addExperience()">+ Add Experience</button>
+
+      <button type="reset" onclick="resetResume()">Clear</button>
+    </form>
+
+    <div class="resume-preview" id="live-preview">
+      <h1 id="p-name"></h1>
+      <p id="p-email"></p>
+      <p id="p-phone"></p>
+      <h3>Profile</h3>
+      <p id="p-summary"></p>
+      <h3>Education</h3>
+      <ul id="p-education"></ul>
+      <h3>Skills</h3>
+      <ul id="p-skills"></ul>
+      <h3>Experience</h3>
+      <ul id="p-experience"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
